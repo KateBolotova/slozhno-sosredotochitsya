@@ -2,4 +2,70 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  width: 375px;
+  border: 1px solid white;
+  margin: auto;
+  padding: 0 10px;
+}
+
+.header {
+  margin-bottom: 40px;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.header__theme-menu-button {
+  font-weight: 400;
+  line-height: 18px;
+  text-align: center;
+  color: var(--accent-color);
+  background: transparent;
+  border: none;
+  text-transform: lowercase;
+  padding: 0 13px;
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid var(--accent-color);
+}
+
+.header__title {
+  font-size: 116px;
+  line-height: 82.5%;
+  color: #DB00FF;
+  text-shadow: 4px 4px 0 var(--accent-color);
+  margin-bottom: 55px;
+  margin-top: 65px;
+}
+
+.header__description {
+  color: #000028;
+  background: var(--accent-color);
+}
+
+.section__title {
+  color: var(--accent-color);
+  margin-bottom: 20px;
+}
+
+.section__description {
+  background: var(--accent-color);
+  margin-bottom: 10px;
+}
+
+.section__paragraph {
+  font-weight: 400;
+  color: #F1B2CE;
+  margin-bottom: 20px;
+}
+
+.section__description_regular {
+  font-weight: 400; 
+  background: var(--accent-color);
+  margin-bottom: 10px;
 }
