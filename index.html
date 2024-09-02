@@ -41,13 +41,13 @@
       </li>
     </ul>
   </nav>
-  <h1 class="header__title">
+  <div class="title_accent">
     no focus
-  </h1>
-  <h3 class="header__description">
+  </div>
+  <h1 class="header__title">
     Что делать, когда не можешь делать ничего <br>
     Или почему нам так сложно сконцентрироваться, особенно когда очень надо
-  </h3>
+  </h1>
 </header>
 <script src="./scripts/script.js"></script>
 <main>
@@ -62,7 +62,7 @@
       Особенно сложно сосредоточиться, когда задач много и все они — важные.
       Где же легендарная многозадачность, когда она так нужна вам (и всем
       нанимающим менеджерам этого мира)? А дело в том, что её просто не
-      существует. Исследователи выяснили, что мозгу тяжело концентрироваться
+      существует. Исследователи <a class="section__paragraph_link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7075496/">выяснили</a>, что мозгу тяжело концентрироваться
       даже на двух делах одновременно. А когда в поле внимания попадает
       несколько важных задач, организм паникует и выделяет кортизол и
       адреналин — «гормоны стресса». Из-за этого мы работаем невнимательно:
@@ -162,14 +162,46 @@
       направленное внимание.
     </p>
   </section>
-  <section>
+  <section class="section__gallery">
     <h3 class="section__description">
       А можно в картинках?
     </h3>
+    <img
+      src="./images/sunset.png"
+      alt="Фото заката в горах"
+      class="section__image"
+      loading="lazy"
+    />
+    <img
+      src="./images/ice-cream.png"
+      alt="Фото мороженого с четырьмя шариками"
+      class="section__image"
+      loading="lazy"
+    />
+    <img
+      src="./images/tape.png"
+      alt="Фото дискеты"
+      class="section__image"
+      loading="lazy"
+    />
+    <img
+      src="./images/books.png"
+      alt="Фото стопки книг"
+      class="section__image"
+      loading="lazy"
+    />
+    <img
+      src="./images/street.png"
+      alt="Фото пустынной улицы"
+      class="section__image"
+      loading="lazy"
+    />
   </section>
 </main>
-<footer>
-
+<footer class="footer decorated-zone">
+  <div class="title_accent">
+    focus
+  </div>
 </footer>
 </body>
 </html>
