@@ -10,3 +10,13 @@
     чем стили в медиазапросе предпочтений пользователя
   */
 }
+
+:root.theme-light {
+  --accent-color: #ff8dcb;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --accent-color: #ff8dcb;
+  }
+}

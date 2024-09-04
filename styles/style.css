@@ -2,8 +2,6 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  width: 375px;
-  margin: auto;
   padding: 0 10px;
 }
 
@@ -80,6 +78,7 @@
 
 .header__theme-menu-button_active {
   outline: 1px solid var(--accent-color);
+  pointer-events: none;
 }
 
 .title_accent {
@@ -163,5 +162,47 @@
   line-height: 82.5%;
   color: #DB00FF;
   text-shadow: 2px 2px var(--accent-color);
-  padding: 250px 3px 250px 4px;
+  padding: 250px calc((100% - 348px) / 2) 250px;
+}
+
+@media (min-width: 768px) {
+  .header__theme-menu-list {
+    padding-top: 146px;
+  }
+
+  .page {
+    padding: 0 20px;
+  }
+
+  .header__title {
+    margin-left: 50%;
+    margin-bottom: 138px;
+    margin-top: 162px;
+  }
+
+  .header {
+    margin-bottom: 60px;
+  }
+
+  .title_accent {
+    font-size: 120px;
+  }
+
+
+  .footer {
+    margin-top: 60px;
+  }
+
+  .footer__title_accent {
+    font-size: 120px;
+    padding: calc(463px - 25px - 20px) calc((100% - 360px) / 2) calc(462px - 25px - 20px);
+  }
+
+  .decor_bottom {
+    margin: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+
 }
