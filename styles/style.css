@@ -4,6 +4,7 @@
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   color: var(--text-color);
   background-color: var(--bg-color);
+  background-attachment: fixed;
 }
 
 .decorated-zone::before {
@@ -16,6 +17,7 @@
   opacity: .5;
   z-index: -1;
   background: var(--bg-url) center / cover no-repeat;
+  background-attachment: fixed;
 }
 
 .decor_right {
@@ -70,6 +72,7 @@
 
 .header {
   position: relative;
+  height: 100vh;
 }
 
 .header__theme-menu-list {
@@ -103,12 +106,12 @@
 }
 
 .header__theme-menu-button_active {
-  outline: 1px solid var(--buttons-color);;
+  outline: 1px solid var(--buttons-color);
   pointer-events: none;
 }
 
 .title_accent {
-  font-size: 116px;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 82.5%;
   color: var(--accent-title-color);
   text-shadow: 4px 4px 0 #ff0070;
@@ -174,9 +177,13 @@
   text-shadow: 2px 2px var(--link-color);
   text-decoration: none;
 }
-  
+
 .section__paragraph_link:hover {
   text-decoration: underline;
+}
+
+.section__paragraph_link:focus {
+  outline: none;
 }
 
 .section__paragraph_link:focus-visible {
@@ -207,13 +214,14 @@
 
 .footer {
   margin-top: 40px;
+  height: 100vh;
 }
 
 .footer__title_accent {
   font-size: 116px;
   color: var(--accent-title-color);
   text-shadow: 2px 2px #ff0070;
-  padding: 286px calc((100% - 348px) / 2) 285px;
+  padding: 251px calc((100% - 348px) / 2) 250px;
   font-style: normal;
   line-height: 82.5%;
 }
@@ -234,7 +242,7 @@
   }
 
   .title_accent {
-    font-size: 120px;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     line-height: 82.5%;
     margin-top: 173px;
     margin-bottom: 162px;
@@ -248,8 +256,8 @@
   }
 
   .decor_bottom {
-    margin-left: 20px;
     padding-bottom: 20px;
+    margin: 0;
   }
 
   .decor_left {
@@ -442,17 +450,13 @@
     font-size: 120px;
     padding: 418px calc((100% - 360px) / 2) 417px;
   }
-
-  .decor_bottom {
-    margin: 0;
-  }
 }
 
 @media (min-width: 1024px) {
   .decorated-zone::before {
     opacity: 1;
   }
-  
+
   .header__navigation {
     display: grid;
     grid-template-columns: 1fr 230px 1fr 81px;
@@ -525,7 +529,7 @@
 
   .section__1 {
     display: grid;
-    grid-template-columns: 1fr 19.93px 2fr;
+    grid-template-columns: 1fr 20px 2fr;
   }
 
   .section__2 {

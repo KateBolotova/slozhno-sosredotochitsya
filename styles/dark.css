@@ -14,13 +14,13 @@
 :root.theme-dark {
   --accent-color: #FF0070;
   --text-color: #000028;
-  --bg-color:  #000028;
+  --bg-color: #000028;
   --section-title-color: #ff0070;
   --section-paragraf-color: #F1B2CE;
   --corner-color: #ff0070;
   --accent-title-color: #DB00FF;
   --buttons-color: #ff0070;
-  --buttons-color-hover: rgba(255, 0, 112, 0.4)
+  --buttons-color-hover: rgba(255, 0, 112, 0.4);
   --link-color: #ff0070;
   --bg-url: url("../images/cover-image-dark.png");
 }
