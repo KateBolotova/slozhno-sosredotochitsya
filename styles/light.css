@@ -19,6 +19,7 @@
   --buttons-color: #353430;
   --buttons-color-hover: rgba(50, 49, 45, 0.4);
   --link-color: #FF8DCB;
+  --shadow-color: #FF8DCB;
   --bg-url: url("../images/cover-image-light.png");
 
   .header__decoration {
@@ -47,6 +48,7 @@
     --buttons-color: #353430;
     --buttons-color-hover: rgba(50, 49, 45, 0.4);
     --link-color: #FF8DCB;
+    --shadow-color: #FF8DCB;
     --bg-url: url("../images/cover-image-light.png");
   }
 }
