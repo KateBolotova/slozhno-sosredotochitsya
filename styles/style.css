@@ -2,6 +2,8 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  color: var(--text-color);
+  background-color: var(--bg-color);
 }
 
 .decorated-zone::before {
@@ -13,7 +15,7 @@
   height: 100%;
   opacity: .5;
   z-index: -1;
-  background: url("../images/cover-image-dark.png") center / cover no-repeat;
+  background: var(--bg-url) center / cover no-repeat;
 }
 
 .decor_right {
@@ -39,8 +41,8 @@
 .decoration_corner {
   height: 25px;
   width: 25px;
-  border-top: 1px solid var(--accent-color);
-  border-right: 1px solid var(--accent-color);
+  border-top: 1px solid var(--corner-color);
+  border-right: 1px solid var(--corner-color);
 }
 
 .header .decoration_corner::before {
@@ -58,8 +60,8 @@
 .decor_bottom {
   height: 25px;
   width: 25px;
-  border-left: 1px solid var(--accent-color);
-  border-bottom: 1px solid var(--accent-color);
+  border-left: 1px solid var(--corner-color);
+  border-bottom: 1px solid var(--corner-color);
 }
 
 .main {
@@ -83,7 +85,7 @@
   font-weight: 400;
   line-height: 18px;
   text-align: center;
-  color: var(--accent-color);
+  color: var(--buttons-color);
   background: transparent;
   border: none;
   text-transform: lowercase;
@@ -91,23 +93,32 @@
   height: 26px;
 }
 
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--buttons-color-hover);
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+  border-bottom: 1px solid var(--buttons-color);
+}
+
 .header__theme-menu-button_active {
-  outline: 1px solid var(--accent-color);
+  outline: 1px solid var(--buttons-color);;
   pointer-events: none;
 }
 
 .title_accent {
   font-size: 116px;
   line-height: 82.5%;
-  color: #DB00FF;
-  text-shadow: 4px 4px 0 var(--accent-color);
+  color: var(--accent-title-color);
+  text-shadow: 4px 4px 0 #ff0070;
   margin-bottom: 55px;
   margin-top: 65px;
   padding: 0 10px;
 }
 
 .header__title {
-  color: #000028;
+  color: var(--text-color);
   background: var(--accent-color);
   font-weight: 700;
   font-size: 18px;
@@ -116,12 +127,12 @@
 }
 
 .header__description {
-  color: #000028;
+  color: var(--section-title-color);
   background: var(--accent-color);
 }
 
 .section__title {
-  color: var(--accent-color);
+  color: var(--section-title-color);
   margin-bottom: 20px;
   font-size: inherit;
   padding-top: 50px;
@@ -143,7 +154,7 @@
 
 .section__paragraph {
   font-weight: 400;
-  color: #F1B2CE;
+  color: var(--section-paragraf-color);
   margin-bottom: 20px;
   font-style: normal;
 }
@@ -160,9 +171,16 @@
 }
 
 .section__paragraph_link {
-  text-shadow: 2px 1px var(--accent-color);
-  /*ПОДЧЕРКИВАНИЕ ДОБАВИТЬ ТОЛЬКО ДЛЯ СЛОВА, НО НЕ ДЛЯ ТЕНИ*/
+  text-shadow: 2px 2px var(--link-color);
   text-decoration: none;
+}
+  
+.section__paragraph_link:hover {
+  text-decoration: underline;
+}
+
+.section__paragraph_link:focus-visible {
+  outline: 1px solid var(--section-paragraf-color);
 }
 
 .section__3 > .section__description {
@@ -193,8 +211,8 @@
 
 .footer__title_accent {
   font-size: 116px;
-  color: #DB00FF;
-  text-shadow: 2px 2px var(--accent-color);
+  color: var(--accent-title-color);
+  text-shadow: 2px 2px #ff0070;
   padding: 286px calc((100% - 348px) / 2) 285px;
   font-style: normal;
   line-height: 82.5%;
@@ -431,6 +449,10 @@
 }
 
 @media (min-width: 1024px) {
+  .decorated-zone::before {
+    opacity: 1;
+  }
+  
   .header__navigation {
     display: grid;
     grid-template-columns: 1fr 230px 1fr 81px;
