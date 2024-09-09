@@ -13,7 +13,7 @@ body {
   font-family: IBM Plex Mono, sans-serif;
   font-weight: 700;
   font-size: 18px;
-  line-height: 23px;
+  line-height: 130%;
   color: #000028;
   background-color: #000028;
 }
