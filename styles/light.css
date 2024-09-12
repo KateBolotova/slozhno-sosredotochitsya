@@ -51,4 +51,17 @@
     --shadow-color: #FF8DCB;
     --bg-url: url("../images/cover-image-light.png");
   }
+
+  .header__decoration {
+    display: none;
+  }
+
+  .header .decoration_corner::before {
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .decorated-zone::before {
+    opacity: 1;
+  }
 }
