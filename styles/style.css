@@ -3,10 +3,9 @@
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   color: var(--text-color);
-  background-color: var(--bg-color);
   background: var(--bg-url) center / cover no-repeat;
+  background-color: var(--bg-color);
   background-attachment: fixed;
-  /*opacity: .5;*/
 }
 
 .decorated-zone::before {
@@ -148,7 +147,8 @@
 }
 
 .section__gallery > .section__description {
-  margin-top: 40px;
+  margin-top: 50px;
+  margin-bottom: 0;
 }
 
 .section__paragraph {
@@ -194,11 +194,6 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
-
-.section__gallery > .section__description {
-  margin-top: 50px;
-  margin-bottom: 0;
 }
 
 .section__image {
@@ -575,7 +570,7 @@
   .section__how {
     grid-template-columns: 1fr 20px 2.06fr;
   }
-  
+
   .section__how > .section__paragraph {
     padding: 0;
   }

@@ -25,15 +25,6 @@
   .header__decoration {
     display: none;
   }
-
-  .header .decoration_corner::before {
-    background: transparent;
-    box-shadow: none;
-  }
-
-  .decorated-zone::before {
-    opacity: 1;
-  }
 }
 
 @media (prefers-color-scheme: light) {
@@ -54,14 +45,5 @@
 
   .header__decoration {
     display: none;
-  }
-
-  .header .decoration_corner::before {
-    background: transparent;
-    box-shadow: none;
-  }
-
-  .decorated-zone::before {
-    opacity: 1;
   }
 }
