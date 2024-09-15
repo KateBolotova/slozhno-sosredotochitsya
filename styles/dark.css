@@ -21,4 +21,8 @@
   --link-color: #ff0070;
   --shadow-color: #ff0070;
   --bg-url: url("../images/cover-image-dark.png");
+
+  .header__decoration {
+    display: block;
+  }
 }
