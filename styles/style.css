@@ -124,11 +124,6 @@
   align-self: end;
 }
 
-.header__description {
-  color: var(--section-title-color);
-  background: var(--accent-color);
-}
-
 .section {
   display: flex;
   flex-direction: column;
@@ -143,6 +138,18 @@
 
 .section__why > .section__title {
   padding-top: 40px;
+}
+
+.section__right_column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section__what_columns {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .card {
@@ -161,11 +168,6 @@
   color: var(--section-paragraf-color);
   margin-bottom: 20px;
   font-style: normal;
-}
-
-.section__gallery > .card__title {
-  margin-top: 50px;
-  margin-bottom: 0;
 }
 
 .card__paragraph:last-child {
@@ -203,6 +205,11 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.section__gallery > .card__title {
+  margin-top: 50px;
+  margin-bottom: 0;
 }
 
 .section__image {
@@ -265,10 +272,7 @@
 
   .title_accent {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    line-height: 82.5%;
     margin-left: 0;
-    text-shadow: 4px 4px 0 var(--shadow-color);
-
   }
 
   .main {
@@ -287,24 +291,8 @@
     padding-top: 0;
   }
 
-  .section__what > .section__title {
-    padding-bottom: 20px;
-  }
-
-  .card {
-    margin-bottom: 20px;
-  }
-
   .card:last-child {
     margin-bottom: 0;
-  }
-
-  .card__paragraph {
-    font-style: normal;
-  }
-
-  .section {
-    gap: 0;
   }
 
   .section__why {
@@ -313,66 +301,14 @@
     column-gap: 20px;
   }
 
-  .section__why > :nth-child(1) {
-    grid-row-start: 1;
-    grid-column-start: 1;
-    grid-row-end: span 4;
-  }
-
-  .section__why > :nth-child(2) {
-    grid-row-start: 2;
-    grid-column-start: 2;
-  }
-
-  .section__why > :nth-child(3) {
-    grid-row-start: 4;
-    grid-column-start: 2;
+  .section__right_column {
+    gap: 20px;
   }
 
   .section__how {
     display: grid;
     grid-template-columns: 1fr 2fr;
     column-gap: 20px;
-  }
-
-  .section__how > .card__title {
-    margin-bottom: 20px;
-  }
-
-  .section__how > :nth-child(1) {
-    grid-row-start: 1;
-    grid-column-start: 1;
-    grid-row-end: span 6;
-  }
-
-  .section__how > :nth-child(2) {
-    grid-row-start: 2;
-    grid-column-start: 2;
-  }
-
-  .section__how > :nth-child(3) {
-    grid-row-start: 3;
-    grid-column-start: 2;
-  }
-
-  .section__how > :nth-child(4) {
-    grid-row-start: 4;
-    grid-column-start: 2;
-  }
-
-  .section__how > :nth-child(5) {
-    grid-row-start: 5;
-    grid-column-start: 2;
-  }
-
-  .section__how > :nth-child(6) {
-    grid-row-start: 6;
-    grid-column-start: 2;
-  }
-
-  .section__how > :nth-child(7) {
-    grid-row-start: 7;
-    grid-column-start: 2;
   }
 
   .section__gallery {
@@ -438,21 +374,6 @@
 }
 
 @media (min-width: 1024px) {
-  .decorated-zone::before {
-    margin-right: 20px;
-    margin-top: 20px;
-  }
-
-  .decorated-zone::after {
-    margin-left: 20px;
-    margin-bottom: 20px;
-  }
-
-  .header__decoration {
-    margin-right: 49px;
-    margin-top: 20px;
-  }
-
   .header__theme-menu {
     display: flex;
     justify-content: center;
@@ -474,7 +395,6 @@
   .header {
     display: flex;
     flex-direction: column;
-    margin-bottom: 60px;
     min-height: 768px;
   }
 
@@ -482,19 +402,10 @@
     display: flex;
     align-items: center;
     height: 100%;
-    line-height: 82.5%;
     margin: 0;
     padding: 160px 0 0 0;
     font-style: normal;
-    text-shadow: 4px 4px 0 #ff0070;
     align-self: start;
-  }
-
-  .main {
-    display: flex;
-    flex-direction: column;
-    gap: 80px;
-    padding: 0 20px;
   }
 
   .section__title {
@@ -507,31 +418,10 @@
     column-gap: 20px;
   }
 
-  .section__what {
+  .section__what_columns {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 20px;
-  }
-
-  .section__what > :nth-child(1) {
-    grid-column-start: 1;
-    grid-row-start: 1;
-    grid-row-end: span 2;
-  }
-
-  .section__what > :nth-child(2) {
-    grid-column-start: 1;
-    grid-row-start: 3;
-  }
-
-  .section__what > :nth-child(3) {
-    grid-column-start: 2;
-    grid-row-start: 3;
-  }
-
-  .section__what > :nth-child(4) {
-    grid-column-start: 3;
-    grid-row-start: 3;
+    gap: 20px;
   }
 
   .section__how {
